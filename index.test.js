@@ -94,7 +94,7 @@ describe("sharesFirstLetter", function () {
   });
 });
 
-describe.only("quintuple", function () {
+describe("quintuple", function () {
   it("returns a new array with each number multiplied by 5", function () {
     expect(quintuple([1, 2, 3])).toEqual([5, 10, 15]);
   });
@@ -198,7 +198,7 @@ describe("findSong", function () {
 });
 
 // findSpy
-describe("findSpy", function () {
+describe.only("findSpy", function () {
   it("returns [0,1] for [[X,spy], [X,X]]", function () {
     expect(
       findSpy([

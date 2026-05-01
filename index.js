@@ -122,7 +122,21 @@ export function quintuple(numbers) {
  * pluralize([]); // []
  */
 export function pluralize(words) {
-  // TODO
+  let pluralArray = [];
+  for (let i = 0; i <= words.length - 1; i++)
+    if (!words[i].endsWith("s")) {
+      let word = "";
+      word = words[i];
+      word += "s";
+      pluralArray.push(word);
+    } else if (words[i].endsWith("s")) {
+      let word = "";
+      word = words[i];
+      word += "e";
+      word += "s";
+      pluralArray.push(word);
+    }
+  return pluralArray;
 }
 
 /**
@@ -139,7 +153,17 @@ export function pluralize(words) {
  * countAttendance([]); // 0
  */
 export function countAttendance(attendance) {
-  // TODO
+  let presentStudent = 0;
+  if (attendance.length === 0) {
+    return 0;
+  } else if (attendance.length > 0) {
+    for (let i = 0; i <= attendance.length - 1; i++) {
+      if (attendance[i] === true) {
+        presentStudent++;
+      }
+    }
+  }
+  return presentStudent;
 }
 
 /**
@@ -155,7 +179,16 @@ export function countAttendance(attendance) {
  * getLongestWord(["a", "ab", "abc"]); // "abc"
  */
 export function getLongestWord(sentence) {
-  // TODO
+  let longestWord = "";
+  if (sentence.length === 0) {
+    return null;
+  } else {
+    for (let i = 0; i <= sentence.length - 1; i++)
+      if (sentence[i].length > longestWord.length) {
+        longestWord = sentence[i];
+      }
+  }
+  return longestWord;
 }
 
 /**
@@ -172,9 +205,21 @@ export function getLongestWord(sentence) {
  * findSong([], "Midnight Drive"); // -1
  */
 export function findSong(playlist, song) {
-  // TODO
+  let isSongInPlaylist = 0;
+  if (playlist.length === 0) {
+    return -1;
+  } else {
+    for (let i = 0; i <= playlist.length - 1; i++) {
+      if (playlist[i] === song) {
+        isSongInPlaylist = i;
+        return isSongInPlaylist;
+      } else if (playlist[i] !== song) {
+        isSongInPlaylist = -1;
+      }
+    }
+    return isSongInPlaylist;
+  }
 }
-
 /**
  * @param {string[][]} map - a 2D array in which each element is a string that
  *  represents something in the area, such as "tree", "pigeon", "lamp", or "guard"
