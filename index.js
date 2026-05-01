@@ -71,6 +71,17 @@ export function getFirstLast(array) {
  * sharesFirstLetter("cat", "dog"); // false
  */
 export function sharesFirstLetter(str1, str2) {
+  let firstCharacterStringOne = str1[0];
+  let firstCharacterStringTwo = str2[0];
+
+  if (str1.length === 0 && str2.length === 0) {
+    return false;
+  } else if (firstCharacterStringOne === firstCharacterStringTwo) {
+    return true;
+  } else {
+    return false;
+  }
+
   // TODO
 }
 
@@ -86,7 +97,11 @@ export function sharesFirstLetter(str1, str2) {
  * quintuple([]); // []
  */
 export function quintuple(numbers) {
-  // TODO
+  let newArray = [];
+  for (let i = 0; i <= numbers.length - 1; i++) {
+    newArray.push(numbers[i] * 5);
+  }
+  return newArray;
 }
 
 /**

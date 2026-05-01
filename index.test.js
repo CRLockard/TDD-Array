@@ -49,7 +49,7 @@ describe("getLast", function () {
   });
 });
 
-describe.only("getFirstLast", function () {
+describe("getFirstLast", function () {
   it("returns [first, last] for a multi-element array", function () {
     expect(getFirstLast([1, 2, 3])).toEqual([1, 3]);
   });
@@ -94,7 +94,7 @@ describe("sharesFirstLetter", function () {
   });
 });
 
-describe("quintuple", function () {
+describe.only("quintuple", function () {
   it("returns a new array with each number multiplied by 5", function () {
     expect(quintuple([1, 2, 3])).toEqual([5, 10, 15]);
   });
