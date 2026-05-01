@@ -10,7 +10,7 @@
  * getFirst([true,false,true]); // true
  */
 export function getFirst(array) {
-  // TODO
+  return array[0];
 }
 
 /**
@@ -25,7 +25,7 @@ export function getFirst(array) {
  * getLast([true,false,true]); // true
  */
 export function getLast(array) {
-  // TODO
+  return array[array.length - 1];
 }
 
 /**
@@ -42,6 +42,18 @@ export function getLast(array) {
  * getFirstLast([42]); // [42]
  */
 export function getFirstLast(array) {
+  let newArray = [];
+  for (let i = 0; i <= 0; i++) {
+    if (array.length === 0) {
+      return newArray;
+    } else if (array.length === 1) {
+      newArray.unshift(array[i]);
+    } else {
+      newArray.unshift(array[i]);
+      newArray.push(array[array.length - 1]);
+    }
+  }
+  return newArray;
   // TODO
 }
 

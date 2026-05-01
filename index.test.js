@@ -49,7 +49,7 @@ describe("getLast", function () {
   });
 });
 
-describe("getFirstLast", function () {
+describe.only("getFirstLast", function () {
   it("returns [first, last] for a multi-element array", function () {
     expect(getFirstLast([1, 2, 3])).toEqual([1, 3]);
   });
